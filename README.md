@@ -2,6 +2,8 @@
 
 Next.js + Tailwind CSS로 만든 개인 소개 홈페이지입니다.
 
+**라이브 사이트**: https://homepage-beta-woad.vercel.app
+
 - **호스팅**: Vercel (GitHub 저장소 push 시 자동 배포)
 - **방명록**: Supabase (Postgres + Row Level Security)
 
