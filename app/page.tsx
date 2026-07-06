@@ -7,7 +7,7 @@ const profile = {
   nameEn: "Taeyun Ko",
   tagline: "만드는 것을 좋아하는 개발자",
   email: "korebob1@gmail.com",
-  github: "https://github.com/taeyunko", // GitHub 연동 후 자동 갱신됩니다
+  github: "https://github.com/korebob1",
   intro: [
     "안녕하세요! 아이디어를 실제로 동작하는 서비스로 만드는 일을 좋아하는 개발자 고태윤입니다.",
     "웹 기술을 중심으로 프론트엔드부터 배포 인프라까지 폭넓게 다루며, 작게 만들고 빠르게 배포하고 꾸준히 다듬는 개발을 지향합니다.",
