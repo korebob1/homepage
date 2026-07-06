@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 고태윤 개인 홈페이지
 
-## Getting Started
+Next.js + Tailwind CSS로 만든 개인 소개 홈페이지입니다.
 
-First, run the development server:
+- **호스팅**: Vercel (GitHub 저장소 push 시 자동 배포)
+- **방명록**: Supabase (Postgres + Row Level Security)
+
+## 로컬 실행
 
 ```bash
+npm install
+cp .env.example .env.local   # Supabase URL / anon key 입력
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 내용 수정
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 프로필·기술 스택·프로젝트: `app/page.tsx` 상단의 `profile`, `skills`, `projects` 객체를 수정하세요.
+- 아바타 이미지: `public/avatar.svg`를 원하는 이미지로 교체하세요.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Supabase
 
-## Learn More
+방명록 테이블 스키마는 `supabase/migrations/`에 있습니다. 새 프로젝트에 적용하려면:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+supabase link --project-ref <project-ref>
+supabase db push
+```
